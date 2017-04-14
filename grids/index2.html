@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../reset/reset.css">
+    <link rel="stylesheet" href="grids.css">
+    <style>
+        .box{
+            margin: 1px;
+            height:20px;
+            border:1px solid red;
+        }
+
+    </style>
+    <title>多余的列（column）将另起一行排列</title>
+
+</head>
+<body>
+<div class="row show-grid">
+    <div class="xsmall_9">.xsmall_9</div>
+    <div class="xsmall_4">.xsmall_4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+    <div class="xsmall_6">.xsmall_6<br>Subsequent columns continue along the new line.</div>
+</div>
+</body>
+</html>

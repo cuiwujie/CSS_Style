@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../reset/reset.css">
+    <link rel="stylesheet" href="grids.css">
+    <style>
+        .box{
+            margin: 1px;
+            height:20px;
+            border:1px solid red;
+        }
+
+    </style>
+    <title>嵌套列</title>
+
+</head>
+<body>
+<div class="row show-grid">
+    <div class="small_9">
+        Level 1: .small_9
+        <div class="row show-grid">
+            <div class="xsmall_8 small_6">
+                Level 2: xsmall_8 .small_6
+            </div>
+            <div class="xsmall_4 small_6">
+                Level 2: .xsmall_4 .small_6
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

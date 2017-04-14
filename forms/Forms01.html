@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../reset/reset.css">
+    <link rel="stylesheet" href="../grids/grids.css">
+    <link rel="stylesheet" href="Forms.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        div select{
+            width:300px;
+        }
+        h1{
+            font-weight:600;
+        }
+        #focusedInput {
+            border-color: #ccc;
+            border-color: rgba(82,168,236,.8);
+            outline: 0;
+            outline: thin dotted\9;
+            -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
+            box-shadow: 0 0 8px rgba(82,168,236,.6);
+        }
+    </style>
+    <title>Forms</title>
+</head>
+<body>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>基本实例</h1>
+    <form>
+            <div class="form_group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form_control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form_group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form_control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form_group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+            </div>
+            <div class="forms_checkbox">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+            </div>
+            <div class="forms_radio">
+                <label >
+                    <input type="radio"> Remember Me
+                </label>
+            </div>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+        <h1>内联表单</h1>
+    <form class=" form_inline">
+        <div class="form_group">
+            <label for="exampleInputName2">Name</label>
+            <input type="text" class="form_control" id="exampleInputName2" placeholder="Jane Doe">
+        </div>
+        <div class="form_group">
+            <label for="exampleInputEmail2">Email</label>
+            <input type="email" class="form_control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+        </div>
+
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>水平排列的表单</h1>
+    <form class=" form_horizontal">
+        <div class="form_group">
+            <label for="inputEmail3" class="medium_2 control_label">Email</label>
+            <div class="medium_10">
+                <input type="email" class="form_control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form_group">
+            <label for="inputPassword3" class="medium_2 control_label">Password</label>
+            <div class="medium_10">
+                <input type="password" class="form_control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>多选和单选框</h1>
+    <form>
+        <div class="forms_checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="forms_checkbox disabled">
+            <label>
+                <input type="checkbox" value="" disabled>
+                Option two is disabled
+            </label>
+        </div>
+        <div class="forms_radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+            </label>
+        </div>
+        <div class="forms_radio">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+            </label>
+        </div>
+        <div class="forms_radio disabled">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios7" value="option3" disabled>
+                Option three is disabled
+            </label>
+        </div>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>内联单选和多选框</h1>
+    <form>
+        <div class="forms_checkbox_inline">
+            <label>
+                <input type="checkbox" value="">
+                Option
+            </label>
+        </div>
+        <div class="forms_checkbox_inline disabled">
+            <label>
+                <input type="checkbox" value="" disabled>
+                Option
+            </label>
+        </div>
+        <div class="forms_radio_inline">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option1" checked>
+                Option
+            </label>
+        </div>
+        <div class="forms_radio_inline">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option2">
+                Option
+            </label>
+        </div>
+        <div class="forms_radio_inline disabled">
+            <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios5" value="option3" disabled>
+                Option
+            </label>
+        </div>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>下拉列表（select）</h1>
+    <form>
+        <select class="form_control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </form>
+    <h1>下拉列表（select） 多选项</h1>
+    <form>
+        <select multiple class="form_control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>焦点状态</h1>
+    <form>
+        <input class="form_control" id="focusedInput" type="text" value="Demonstrative focus state">
+    </form>
+    <h1>禁用状态</h1>
+    <form>
+        <input class="form_control"  type="text" value="Demonstrative focus state" disabled>
+    </form>
+    <h1>只读状态</h1>
+    <form>
+        <input class="form_control"  type="text" value="Demonstrative focus state" readonly>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>校验状态</h1>
+    <form>
+        <div class="form_group has_success">
+            <label for="example1" class="control_label">text address</label>
+            <input type="text" class="form_control" id="example1" placeholder="Email">
+        </div>
+        <div class="form_group has_warning">
+            <label for="example2" class="control_label">text address</label>
+            <input type="text" class="form_control" id="example2" placeholder="Email">
+        </div>
+        <div class="form_group has_error">
+            <label for="example3" class="control_label">text address</label>
+            <input type="text" class="form_control" id="example3" placeholder="Email">
+        </div>
+        <div class="has_success">
+            <div class="forms_checkbox">
+                <label class="control_label">
+                    <input type="checkbox" id="checkboxSuccess" value="option1">
+                    Checkbox with success
+                </label>
+            </div>
+        </div>
+        <div class="has_warning">
+            <div class="forms_checkbox">
+                <label class="control_label">
+                    <input type="checkbox" id="checkboxWarning" value="option1">
+                    Checkbox with warning
+                </label>
+            </div>
+        </div>
+        <div class="has_error">
+            <div class="forms_checkbox">
+                <label>
+                    <input type="checkbox" id="checkboxError" value="option1">
+                    Checkbox with error
+                </label>
+            </div>
+        </div>
+        <div class="has_success">
+            <div class="forms_radio">
+                <label class="control_label">
+                    <input type="radio" id="radioSuccess" value="option1">
+                    Checkbox with success
+                </label>
+            </div>
+        </div>
+        <div class="has_warning">
+            <div class="forms_radio">
+                <label class="control_label">
+                    <input type="radio" id="radioWarning" value="option1">
+                    Checkbox with warning
+                </label>
+            </div>
+        </div>
+        <div class="has_error">
+            <div class="forms_radio">
+                <label>
+                    <input type="radio" id="radioError" value="option1">
+                    Checkbox with error
+                </label>
+            </div>
+        </div>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>基本+添加额外的图标</h1>
+    <form>
+        <div class="form_group has_success has_feedback">
+            <label class="control_label" for="inputSuccess2">Input with success</label>
+            <input type="text" class="form_control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+            <i class="fa fa-check form-control-feedback" aria-hidden="true"></i>
+        </div>
+        <div class="form_group has_warning has_feedback">
+            <label class="control_label" for="inputwarning">Input with success</label>
+            <input type="text" class="form_control" id="inputwarning" aria-describedby="inputSuccess2Status">
+            <i class="fa fa-exclamation-triangle form-control-feedback" aria-hidden="true"></i>
+        </div>
+        <div class="form_group has_error has_feedback">
+            <label class="control_label" for="inputerror">Input with success</label>
+            <input type="text" class="form_control" id="inputerror" aria-describedby="inputSuccess2Status">
+            <i class="fa fa-times form-control-feedback" aria-hidden="true"></i>
+        </div>
+        <div class="form_group has_success has_feedback">
+            <label class="control_label" for="inputSuccess4">Input with success</label>
+            <div class="has_feedback_icon">
+                <span class="input-group-addon">&copy;</span>
+                <input type="text" class="form_control" id="inputSuccess4" aria-describedby="inputSuccess2Status">
+                <i class="fa fa-check form-control-feedback" aria-hidden="true"></i>
+            </div>
+        </div>
+    </form>
+</div>
+<div style="margin:50px;border:1px solid #ccc;padding:20px;">
+    <h1>为水平排列的表单和内联表单设置可选的图标</h1>
+    <form class=" form_horizontal">
+        <div class="form_group has_success has_feedback">
+            <label class="medium_2  control_label" for="inputSuccess3">Input with success</label>
+            <div class="medium_10 ">
+                <div class="has_feedback_icon">
+
+
+                <input type="text" class="form_control" id="inputSuccess3" aria-describedby="inputSuccess2Status">
+                <i class="fa fa-check form-control-feedback" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="form_group has_warning has_feedback">
+            <label class="medium_2 control_label" for="inputwarning2">Input with success</label>
+            <div class="medium_10 ">
+                <div class="has_feedback_icon">
+                <input type="text" class=" form_control" id="inputwarning2" aria-describedby="inputSuccess2Status">
+                <i class="fa fa-exclamation-triangle form-control-feedback" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="form_group has_error has_feedback">
+            <label class="medium_2 control_label" for="inputerror2">Input with success</label>
+            <div class="medium_10 ">
+                <div class="has_feedback_icon">
+                    <input type="text" class=" form_control" id="inputerror2" aria-describedby="inputSuccess2Status">
+                    <i class="fa fa-times form-control-feedback" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+        <div class="form_group has_success has_feedback">
+            <label class="medium_2  control_label" for="inputSuccess5">Input with success</label>
+            <div class="medium_10 ">
+                <div class="has_feedback_icon">
+                    <input type="text" class="form_control" id="inputSuccess5" aria-describedby="inputSuccess2Status">
+                    <span class="input-group-addon">&copy;</span>
+                    <i class="fa fa-check form-control-feedback" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../reset/reset.css">
+    <link rel="stylesheet" href="grids.css">
+    <style>
+        .box{
+            margin: 1px;
+            height:20px;
+            border:1px solid red;
+        }
+
+    </style>
+    <title>Title</title>
+
+</head>
+<body>
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row show-grid">
+    <div class="xsmall_12 medium_8">.xsmall_12 .medium_8</div>
+    <div class="xsmall_6 medium_4">.xsmall_6 .medium_4</div>
+</div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row show-grid">
+    <div class="xsmall_6 medium_4">.xsmall_6 .medium_4</div>
+    <div class="xsmall_6 medium_4">.xsmall_6 .medium_4</div>
+    <div class="xsmall_6 medium_4">.xsmall_6 .medium_4</div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row show-grid">
+    <div class="xsmall_6 medium_6">.xsmall_6 .medium_6</div>
+    <div class="xsmall_6 medium_6">.xsmall_6 .medium_6</div>
+</div>
+</body>
+</html>
